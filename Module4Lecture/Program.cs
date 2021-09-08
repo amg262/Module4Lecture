@@ -138,13 +138,13 @@ namespace Module4Lecture
                 Console.WriteLine();
             }
         }
-        
+
         public void Star2()
         {
             Console.WriteLine("Enter width");
             int width = 0;
             Int32.TryParse(Console.ReadLine(), out width);
-            
+
             for (int i = 0; i < 4; i++)
             {
                 for (int j = 0; j < width; j++)
@@ -155,7 +155,7 @@ namespace Module4Lecture
                 Console.WriteLine();
             }
         }
-        
+
         public void RandomTester()
         {
             Random randomNumGen = new Random();
@@ -167,6 +167,20 @@ namespace Module4Lecture
                 double randomNum = randomNumGen.NextDouble();
                 if (randomNum < 0.1) break; // Break out of the loop!
                 else count++;
+            }
+
+            Console.WriteLine(count);
+        }
+
+        public void RandomTester2()
+        {
+            Random randomNumGen = new Random();
+            int count = 0;
+            for (int i = 0; i < 100; i++)
+            {
+                double number = randomNumGen.NextDouble();
+                if (number < 0.10) continue; // Skip code below this, loop again
+                count++;
             }
 
             Console.WriteLine(count);
@@ -184,6 +198,7 @@ namespace Module4Lecture
             //p.Star();
             //p.Star2();
             p.RandomTester();
+            p.RandomTester2();
         }
     }
 }
