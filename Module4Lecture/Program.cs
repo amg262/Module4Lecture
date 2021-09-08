@@ -155,7 +155,7 @@ namespace Module4Lecture
                 Console.WriteLine();
             }
         }
-
+        
         public void RandomTester()
         {
             Random randomNumGen = new Random();
@@ -182,8 +182,8 @@ namespace Module4Lecture
             //p.TableLoops();
             // p.Loop();
             //p.Star();
-            p.Star2();
-            //p.RandomTester();
+            //p.Star2();
+            p.RandomTester();
         }
     }
 }
