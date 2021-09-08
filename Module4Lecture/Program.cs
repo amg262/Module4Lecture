@@ -4,6 +4,60 @@ namespace Module4Lecture
 {
     class Program
     {
+        public void Loop()
+        {
+            for (int rows = 0; rows < 7; rows++)
+            {
+                for (int stars = 0; stars <= rows; stars++)
+                {
+                    Console.Write($"*"); // *
+                    
+                }
+
+                Console.WriteLine();
+            }
+        }
+        
+     
+
+        
+        public void LoopLab()
+        {
+            
+            
+            for (int rows = 0; rows < 7; rows++)
+            {
+                for (int hash = 0; hash <= rows; hash++)
+                {
+
+
+                    for (int i = 0; i < rows; i++)
+                    {
+                        Console.Write(" ");
+                    }
+                    Console.Write($"#"); // *
+
+                }
+
+                Console.WriteLine();
+            }
+        }
+        
+        public void TableLoops()
+        {
+            const int ROWS = 4;
+            const int COLS = 4;
+            for (int row = 1; row <= ROWS; row++)
+            {
+                for (int col = 1; col <= COLS; col++)
+                {
+                    Console.Write((row * col) + " ");
+                }
+
+                Console.WriteLine();
+            }
+        }
+
         public void NestedLoops()
         {
             for (int hours = 0; hours < 24; hours++)
@@ -84,7 +138,10 @@ namespace Module4Lecture
             //p.FirstTryItOut();
             // p.RunningTotal();
             // p.RunningTotal2();
-            p.NestedLoops();
+            // p.NestedLoops();
+            //p.TableLoops();
+            // p.Loop();
+            p.LoopLab();
         }
     }
 }
