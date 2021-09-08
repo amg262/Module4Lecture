@@ -138,6 +138,24 @@ namespace Module4Lecture
                 Console.WriteLine();
             }
         }
+        
+        public void Star2()
+        {
+            Console.WriteLine("Enter width");
+            int width = 0;
+            Int32.TryParse(Console.ReadLine(), out width);
+            
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < width; j++)
+                {
+                    Console.Write("* ");
+                }
+
+                Console.WriteLine();
+            }
+        }
+
         public void RandomTester()
         {
             Random randomNumGen = new Random();
@@ -163,7 +181,8 @@ namespace Module4Lecture
             // p.NestedLoops();
             //p.TableLoops();
             // p.Loop();
-            p.Star();
+            //p.Star();
+            p.Star2();
             //p.RandomTester();
         }
     }
