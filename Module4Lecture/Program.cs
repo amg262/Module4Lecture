@@ -11,38 +11,31 @@ namespace Module4Lecture
                 for (int stars = 0; stars <= rows; stars++)
                 {
                     Console.Write($"*"); // *
-                    
                 }
 
                 Console.WriteLine();
             }
         }
-        
-     
 
-        
+
         public void LoopLab()
         {
-            
-            
             for (int rows = 0; rows < 7; rows++)
             {
                 for (int hash = 0; hash <= rows; hash++)
                 {
-
-
                     for (int i = 0; i < rows; i++)
                     {
                         Console.Write(" ");
                     }
-                    Console.Write($"#"); // *
 
+                    Console.Write($"#"); // *
                 }
 
                 Console.WriteLine();
             }
         }
-        
+
         public void TableLoops()
         {
             const int ROWS = 4;
@@ -132,6 +125,35 @@ namespace Module4Lecture
             }
         }
 
+
+        public void Star()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.Write("* ");
+                }
+
+                Console.WriteLine();
+            }
+        }
+        public void RandomTester()
+        {
+            Random randomNumGen = new Random();
+            int count = 0;
+            while (true)
+            {
+                // Infinite loop??
+
+                double randomNum = randomNumGen.NextDouble();
+                if (randomNum < 0.1) break; // Break out of the loop!
+                else count++;
+            }
+
+            Console.WriteLine(count);
+        }
+
         static void Main(string[] args)
         {
             Program p = new Program();
@@ -141,7 +163,8 @@ namespace Module4Lecture
             // p.NestedLoops();
             //p.TableLoops();
             // p.Loop();
-            p.LoopLab();
+            p.Star();
+            //p.RandomTester();
         }
     }
 }
