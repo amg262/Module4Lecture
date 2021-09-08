@@ -6,7 +6,11 @@ namespace Module4Lecture
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+            for (int i = 2; i <= 10; i++)
+            {
+                
+            }
         }
     }
 }
