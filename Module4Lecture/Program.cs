@@ -4,7 +4,7 @@ namespace Module4Lecture
 {
     class Program
     {
-        public void RunningTotal()
+        public void RunningTotal2()
         {
             int count = 0;
             int total = 0;
@@ -22,9 +22,26 @@ namespace Module4Lecture
             }
 
             Console.WriteLine($"Your total is {total:C}");
-            Console.WriteLine($"Your average is {total / count}");
+            Console.WriteLine($"Your average is {total / (double) count}");
         }
+        public void RunningTotal()
+        {
+            int total =0;
+            int amount = 0;
 
+            Console.Write("Enter Sales Amount");
+            Int32.TryParse(Console.ReadLine(), out amount);
+
+            while (amount != -1)
+            {
+                total += amount;
+                Console.Write("Enter Sales Amount");
+                Int32.TryParse(Console.ReadLine(), out amount);
+            }
+
+            Console.WriteLine($"Your total is {total:C}");
+        }
+        
         public void FirstTryItOut()
         {
             /* loop displays even numbers between 2 and 10 incldue 2 and 10
@@ -37,12 +54,10 @@ namespace Module4Lecture
             {
                 Console.WriteLine(i);
             }
-
             for (int i = 11; i <= 34; i++)
             {
                 Console.WriteLine(i);
             }
-
             for (int i = 56; i >= 3; i--)
             {
                 Console.WriteLine(i);
@@ -53,7 +68,8 @@ namespace Module4Lecture
         {
             Program p = new Program();
             //p.FirstTryItOut();
-            p.RunningTotal();
+           // p.RunningTotal();
+            p.RunningTotal2();
         }
     }
 }
